@@ -4,8 +4,8 @@
    <form class="login" @submit.prevent="login">
      
      <div>
-       <label>Email</label>
-     <input required v-model="email" type="email" placeholder="Name"/>
+       <label>Username</label>
+     <input required v-model="username" type="text" placeholder="Name"/>
      </div>
      <div>
        <label>Password</label>
@@ -28,16 +28,27 @@ export default {
     data(){
       return {
         userData:{
-          email : "",
+          username : "",
           password : ""
         }
       }
     },
+    computed:{
+      payload(){
+        return{
+          username :this.username,
+           password : this.password,
+        }
+        
+      }
+    },
      methods: {
-      login: function () {
-        this.$store.dispatch('login', this.userData)
-       .then(() => this.$router.push('/'))
-       .catch(err => console.log(err))
+      login() {
+        this.$store.dispatch('login', this.payload)
+       .then(() => this.$router.push('/dashboard'))
+       .catch(err =>
+       console.log(err))
+       alert('Invalid login')
       }
     },
     

@@ -11,8 +11,12 @@
      data-aos-easing="ease" data-aos="zoom-in">
 
      </div>
-     <div>
-       Alt carbon's idea is revolutionary
+     <div class='about-text'>
+         Alt Carbon is an advanced technology for building a sustainable energy future.
+         <br>
+         We leverage signal processing and artificial intelligence to deliver cutting edge solutions that help to solve modern-day industry challenges.
+         <br>
+         Alt Carbon aims to cut down emissions from energy plants that result from machine Inefficiency which inherently saves more energy and reduces operational downtime.
      </div>
     </div>
 
@@ -40,12 +44,16 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+
 h1{
-  text-align:center;
+  text-align:right;
+  border-bottom: 1px solid #286e00;
   color:#286e00;
   font-weight: 900;
-   margin: 20px 0px;
+   margin: 20px ;
    font-size: 30px;
+   font-family: 'Berkshire Swash', cursive;
 }
 .about{
      display:flex;
@@ -79,12 +87,21 @@ h1{
 .about-image{
   height:300px; 
 }
+.about-text{
+  width:50%;
+  line-height: 35px;
+
+}
 
 /* responsiveness */
  @media screen and (max-width: 500px){
    .about{
      display:block;
    }
+   .about-text{
+  width:100%;
+
+}
  .getstarted-image, .about-image{
    width:100%;
  }

@@ -5,27 +5,35 @@
     <h1>
       Welcome
     </h1>
+    <Pump/>
 
   </section>
 
 </template>
 
 <script>
-
+import Pump from './Pump.vue'
 
 export default {
-  name: 'Home',
+  name: 'Dashboard',
+  components: {
+    Pump
+  }
 
 }
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+
 h1{
-  text-align:left;
+  text-align:right;
   color:#286e00;
   font-weight: 900;
    margin: 20px;
    font-size: 30px;
+   border-bottom: 1px solid #286e00;
+   font-family: 'Berkshire Swash', cursive;
 }
 .about{
      display:flex;

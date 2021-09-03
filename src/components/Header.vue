@@ -3,7 +3,8 @@
       <div class='nav-logo'> <img  class='logo' alt="logo" src="../assets/icon.png"> </div>
       <div class='nav-items'>
       <router-link to="/">Home</router-link> |
-      <span v-if="isLoggedIn"> | <a @click="logout">Logout</a></span>
+      <span  v-if="isLoggedIn"> | <a @click="logout">Logout</a></span>
+      <span v-else> <router-link to="/login"> Login </router-link>  </span>
       </div>
   </header>
 
@@ -35,6 +36,11 @@ export default {
      display: flex;
      justify-content: space-between;
      padding:0px 40px;
+     color:white ;
+    text-decoration: none;
+    font-size:18px;
+  cursor: pointer;
+  font-weight:bold;
  }
   .nav-items{
     margin:30px 0px;
@@ -43,6 +49,10 @@ export default {
  header a{
     color:white ;
     text-decoration: none;
+    font-size:18px;
+  cursor: pointer;
+  font-weight:bold;
+  margin-right:10px;
  }
  .logo{
    width:100px;
