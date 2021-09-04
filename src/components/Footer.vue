@@ -2,9 +2,8 @@
   <footer>
       <div class='nav-logo'> <img  class='logo' alt="logo" src="../assets/icon.png"> </div>
       <div class='nav-items'>
-      <router-link to="/">Home</router-link> 
       <p> Copyright © 2021 </p>
-      <p> Devloped by Team AltCarbon </p>
+      <p> Developed by Team AltCarbon </p>
       </div>
   </footer>
 
@@ -15,17 +14,7 @@
 
 export default {
   name: 'Footer',
-  computed : {
-      isLoggedIn() { return this.$store.getters.isLoggedIn}
-    },
-    methods: {
-      logout() {
-        this.$store.dispatch('logout')
-        .then(() => {
-          this.$router.push('/')
-        })
-      }
-    }
+
  
 }
 </script>
@@ -43,14 +32,13 @@ export default {
     text-decoration: none;
     font-size:18px;
   cursor: pointer;
-  font-weight:bold;
  }
   .nav-items{
     margin:30px 0px;
     display:block;
    }
    .nav-items p{
-     margin:10px 0px;
+     margin:20px 0px;
    }
 
  footer a{
@@ -58,7 +46,6 @@ export default {
     text-decoration: none;
     font-size:18px;
   cursor: pointer;
-  font-weight:bold;
   margin-right:10px;
  }
  .logo{
@@ -72,6 +59,7 @@ export default {
    }
    .nav-items{
      padding-bottom: 20px;
+     font-size:15px;
    }
    .nav-logo{
      text-align: center;

@@ -28,7 +28,7 @@
         </p>
        <p>
         <button>
-        <router-link to="/login"> Get Started </router-link>
+        <router-link to="/dashboard"> Get Started </router-link>
      </button>
        </p>
     </div>
@@ -54,6 +54,7 @@ h1{
   color:#286e00;
   font-weight: 900;
    margin: 20px ;
+   padding-right: 30px;
    font-size: 30px;
    font-family: 'Berkshire Swash', cursive;
 }
@@ -117,7 +118,9 @@ h1{
       margin: 30px auto;;
    padding:0px 10px;
 }
-
+   section{
+     height:100%;
+}
 
  } 
 

@@ -1,6 +1,12 @@
 <template>
   <section>
-    <div class="pump" v-if=" pump1Val == '1'">
+
+
+  
+
+
+
+    <div class="pump" v-if=" pump1Val == '1' ">
       <img class='un-image'  src='../../assets/bell.gif' alt='a bell GIF'/>
         Pump 1 reading is Anomalous
     </div>
@@ -69,25 +75,29 @@ export default {
      pump3Val(){
       return this.pump3
     },
+  
  
   },
-  async created() {
+  async mounted() {
   const proxyUrl = 'https://cors-anywhere.herokuapp.com/' 
   const apiUrl1 = 'http://altcarbon.herokuapp.com/api/pump1/';
   const apiUrl2 = 'http://altcarbon.herokuapp.com/api/pump2/';
   const apiUrl3 = 'http://altcarbon.herokuapp.com/api/pump3/';
-
+ 
   await axios.all([
   axios.get(proxyUrl + apiUrl1),
   axios.get(proxyUrl + apiUrl2),
   axios.get(proxyUrl + apiUrl3),
 ])
 .then(responseArr => {
+  
   this.pump1 =  responseArr[0].data.category;
   this.pump2 =  responseArr[1].data.category;
   this.pump3 =  responseArr[2].data.category;
 })  
-  .catch((error)  => { error.message})
+  .catch((error)  => { 
+  console.log(error.message)
+  })
     
       
   
@@ -125,6 +135,8 @@ display: block;
 width: 100%;
 margin-bottom: 10px;
 }
+
+
  @media screen and (max-width: 500px){
   section{
   display:block;

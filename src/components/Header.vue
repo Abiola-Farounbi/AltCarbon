@@ -2,9 +2,8 @@
   <header>
       <div class='nav-logo'> <img  class='logo' alt="logo" src="../assets/icon.png"> </div>
       <div class='nav-items'>
-      <router-link to="/">Home</router-link> |
-      <span  v-if="isLoggedIn"> | <a @click="logout">Logout</a></span>
-      <span v-else> <router-link to="/login"> Login </router-link>  </span>
+      <router-link to="/">Home </router-link> 
+        <router-link to="/dashboard"> Dashboard </router-link> 
       </div>
   </header>
 
@@ -15,19 +14,8 @@
 
 export default {
   name: 'Header',
-  computed : {
-      isLoggedIn() { 
-        return this.$store.getters.isLoggedIn
-        }
-    },
-    methods: {
-      logout() {
-        this.$store.dispatch('logout')
-        .then(() => {
-          this.$router.push('/')
-        })
-      }
-    }
+ 
+   
  
 }
 </script>
@@ -49,12 +37,19 @@ export default {
    }
 
  header a{
-    color:white ;
+     color:#286e00 ;
     text-decoration: none;
+   background-color: white;
+   border-radius: 10px;
+   padding:10px;
     font-size:18px;
   cursor: pointer;
   font-weight:bold;
   margin-right:10px;
+ }
+
+ header a:hover{
+  transform: scaleY(1.5);
  }
  .logo{
    width:100px;

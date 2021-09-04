@@ -1,10 +1,7 @@
-// Dyanamic Component to handle the pumps
-
 <template>
   <section>
     <h1>
       Welcome
-      <span> {{ this.username}} </span>
     </h1>
     <Pump/>
 
@@ -22,18 +19,11 @@ export default {
   },
   data() {
     return {
-     username :''
+    
     }
   },
-  computed:{
-       isName(){
-      return this.$store.getters.isName
-    }
-  },
-  created(){
-    this.username = this.isName
-  }
 }
+
 </script>
 
 <style scoped>
@@ -43,6 +33,7 @@ h1{
   text-align:right;
   color:#286e00;
    margin: 20px;
+   padding-right: 30px;
    font-size: 30px;
    border-bottom: 1px solid #286e00;
    font-family: 'Berkshire Swash', cursive;
@@ -88,6 +79,9 @@ section{
    .about{
      display:block;
    }
+   section{
+     height:100%;
+}
  .getstarted-image, .about-image{
    width:100%;
  }
