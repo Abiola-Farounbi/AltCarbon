@@ -29,7 +29,7 @@
     </div>
 
       <div class="pump" v-if="pump3Val == '1'">
-         <img class='un-image'  src='../../assets/greenNotification.png' alt='a bell GIF'/>
+            <img class='un-image'  src='../../assets/bell.gif' alt='a bell GIF'/>
         Pump 3 reading is Anomalous
     </div>
     <div class="pump" v-else-if="pump3Val == '0'">
@@ -68,9 +68,10 @@ export default {
     },
      pump3Val(){
       return this.pump3
-    }
+    },
+ 
   },
-  async mounted() {
+  async created() {
   const proxyUrl = 'https://cors-anywhere.herokuapp.com/' 
   const apiUrl1 = 'http://altcarbon.herokuapp.com/api/pump1/';
   const apiUrl2 = 'http://altcarbon.herokuapp.com/api/pump2/';

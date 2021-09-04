@@ -4,6 +4,7 @@
   <section>
     <h1>
       Welcome
+      <span> {{ this.username}} </span>
     </h1>
     <Pump/>
 
@@ -18,8 +19,20 @@ export default {
   name: 'Dashboard',
   components: {
     Pump
+  },
+  data() {
+    return {
+     username :''
+    }
+  },
+  computed:{
+       isName(){
+      return this.$store.getters.isName
+    }
+  },
+  created(){
+    this.username = this.isName
   }
-
 }
 </script>
 
@@ -29,7 +42,6 @@ export default {
 h1{
   text-align:right;
   color:#286e00;
-  font-weight: 900;
    margin: 20px;
    font-size: 30px;
    border-bottom: 1px solid #286e00;

@@ -42,15 +42,24 @@ export default {
            password : this.password,
         }
         
-      }
+      },
+      isLoggedIn() { 
+        return this.$store.getters.isLoggedIn
+        }
     },
      methods: {
       login() {
         this.$store.dispatch('login', this.payload)
-       .then(() => this.$router.push('/dashboard'))
+       .then(() => 
+       {
+         if(this.isLoggedIn){
+            this.$router.push('/dashboard')
+         }
+       }
+       )
        .catch(err =>
        console.log(err))
-       alert('Invalid login')
+       
       }
     },
     

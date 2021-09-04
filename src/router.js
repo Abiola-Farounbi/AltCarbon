@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import store from './store.js'
 import Home from './components/Home'
 import Login from './components/Login'
 import Dashboard from './components/Dashboard/Dashboard'
+import store from './store.js'
 
 const routes = [
     {
@@ -19,10 +19,11 @@ const routes = [
         path: '/dashboard',
         name: 'dashboard',
         component: Dashboard,
-        meta: {
-          requiresAuth: true
-        }
+        // meta: {
+        //   requiresAuth: true
+        // }
     },
+  
 ];
 
 

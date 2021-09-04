@@ -16,7 +16,9 @@
 export default {
   name: 'Header',
   computed : {
-      isLoggedIn() { return this.$store.getters.isLoggedIn}
+      isLoggedIn() { 
+        return this.$store.getters.isLoggedIn
+        }
     },
     methods: {
       logout() {
