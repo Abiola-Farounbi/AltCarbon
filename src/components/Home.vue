@@ -23,7 +23,9 @@
     <div class="get-started">
        <img class='getstarted-image' src="../assets/getStarted.png" alt='green environment'
         aos-delay='1000'  data-aos-easing="ease" data-aos="zoom-in">
-
+        <p class='get-started-text'>
+          Start the process easily 
+        </p>
        <p>
         <button>
         <router-link to="/login"> Get Started </router-link>
@@ -68,6 +70,11 @@ h1{
 }
 .get-started p{
   text-align: center;
+}
+.get-started-text{
+  font-size:20px;
+  font-weight:900;
+  margin-bottom: 20px;
 }
  .getstarted-image{
    width:100%;

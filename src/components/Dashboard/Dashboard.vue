@@ -67,6 +67,9 @@ h1{
 .about-image{
   height:300px; 
 }
+section{
+     height:100vh;
+}
 
 /* responsiveness */
  @media screen and (max-width: 500px){

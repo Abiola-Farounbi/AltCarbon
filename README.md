@@ -1,24 +1,9 @@
-# alt-carbon
+# Alt Carbon
 
-## Project setup
-```
-npm install
-```
+ ### Alt Carbon is an advanced technology for building a sustainable energy future.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+### Alt Carbon leverages signal processing and artificial intelligence to deliver cutting edge solutions that help to solve modern-day industry challenges.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+ ### Alt Carbon aims to cut down emissions from energy plants that result from machine Inefficiency which inherently saves more energy and reduces operational downtime.
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Live Demo - 

@@ -1,5 +1,6 @@
 <template>
- <div class='loginForm'>
+<section>
+   <div class='loginForm'>
    <h1>Sign in</h1>
    <form class="login" @submit.prevent="login">
      
@@ -17,6 +18,7 @@
      </div>
    </form>
  </div>
+</section>
 </template>
 
 <script>
@@ -55,7 +57,7 @@ export default {
   }
   </script>
   
-  <style>
+  <style scoped>
   .loginForm{
       width:500px;
       margin:50px auto;
@@ -91,6 +93,10 @@ export default {
 
 .loginForm div{
   margin:20px 0px;
+}
+
+section{
+  height:100vh;
 }
 
 

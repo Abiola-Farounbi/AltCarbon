@@ -1,5 +1,5 @@
 import { createStore } from "vuex" 
-import axios from 'axios'
+import api from "./api"
 
 const store = createStore({
    state: {
@@ -17,7 +17,9 @@ const store = createStore({
    },
    actions:{
     login({commit}, payload){
-         axios.post("https://altcarbon.herokuapp.com/auth/login/", payload)
+        
+
+         api.post('/auth/login/', payload)
            .then(res => {
                commit('auth_state', true)
                 console.log(res.data)
