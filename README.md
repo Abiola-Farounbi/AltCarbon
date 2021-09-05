@@ -6,4 +6,8 @@
 
  ### Alt Carbon aims to cut down emissions from energy plants that result from machine Inefficiency which inherently saves more energy and reduces operational downtime.
 
-### Live Demo - 
+### Live Demo - https://alt-carbon.netlify.app/
+
+
+## Contribution
+- Developed the frontend of the user interface
