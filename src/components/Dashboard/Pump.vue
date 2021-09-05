@@ -74,9 +74,9 @@ export default {
   },
   async mounted() {
   
-  const apiUrl1 = 'http://altcarbon.herokuapp.com/api/pump1/';
-  const apiUrl2 = 'http://altcarbon.herokuapp.com/api/pump2/';
-  const apiUrl3 = 'http://altcarbon.herokuapp.com/api/pump3/';
+  const apiUrl1 = 'https://altcarbon.herokuapp.com/api/pump1/';
+  const apiUrl2 = 'https://altcarbon.herokuapp.com/api/pump2/';
+  const apiUrl3 = 'https://altcarbon.herokuapp.com/api/pump3/';
  
   await axios.all([
   axios.get(apiUrl1),
