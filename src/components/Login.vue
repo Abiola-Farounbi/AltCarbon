@@ -29,10 +29,8 @@ export default {
     },
     data(){
       return {
-        userData:{
           username : "",
           password : ""
-        }
       }
     },
     computed:{
@@ -43,20 +41,14 @@ export default {
         }
         
       },
-      isLoggedIn() { 
-        return this.$store.getters.isLoggedIn
-        }
     },
      methods: {
       login() {
         this.$store.dispatch('login', this.payload)
        .then(() => 
-       {
-         if(this.isLoggedIn){
-            this.$router.push('/dashboard')
-         }
-       }
-       )
+      // this.$router.push('/dashboard')
+      console.log('d')
+      )
        .catch(err =>
        console.log(err))
        
