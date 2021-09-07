@@ -10,7 +10,7 @@
     </div>
     <div class="pump" v-else>
       <img class='un-image'  src='../../assets/404.gif' alt='a 404 GIF'/>
-      Unable to load reading
+      Loading reading
     </div>
 
 
@@ -25,7 +25,7 @@
      <div class="pump" v-else>
       
       <img class='un-image'  src='../../assets/404.gif' alt='a 404 GIF'/>
-      Unable to load readings
+     Loading readings
     </div>
 
       <div class="pump" v-if="pump3Val == '1'">
@@ -38,7 +38,7 @@
     </div>
     <div class="pump" v-else>
       <img class='un-image' src='../../assets/404.gif' alt='a 404 GIF'/>
-      Unable to load readings
+     Loading readings
     </div>
     
 
